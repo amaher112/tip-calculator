@@ -33,6 +33,12 @@ function getTotalEighteen() {
 
 function getTotalTwenty() {
   event.preventDefault();
+  const billValue = bill.value;
+  const billTotal = Number.parseFloat(billValue);
+  billWithTwenty = billTotal*0.2;
+  tip.textContent = billWithTwenty;
+  const bill20Total = (billWithTwenty += billTotal);
+  total.textContent = bill20Total
 }
 
 fifteenBtn.addEventListener("click", getTotalFifteen);
